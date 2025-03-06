@@ -123,7 +123,7 @@ def main():
     if "available_models" not in st.session_state:
         st.session_state.available_models = []
     if "base_url" not in st.session_state:
-        st.session_state.base_url = "https://api.example.com"
+        st.session_state.base_url = "https://api.openai.com/v1/"
     if "api_key" not in st.session_state:
         st.session_state.api_key = ""
     if "is_optimizing" not in st.session_state:
@@ -166,7 +166,7 @@ def main():
             "base_url", "https://api.example.com"))
         api_key = st.text_input(
             "API KEY", type="password", value=st.session_state.get("api_key", ""))
-        model_name = st.text_input("模型名称", value="")
+        model_name = st.text_input("模型名称", value="gpt-4o-mini")
 
         col1, col2 = st.columns(2)
         with col1:
